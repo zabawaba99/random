@@ -1,4 +1,4 @@
-# Random
+# Random [![Build Status](https://travis-ci.org/zabawaba99/random.svg?branch=master)](https://travis-ci.org/zabawaba99/random) [![Coverage Status](https://coveralls.io/repos/zabawaba99/random/badge.svg?branch=master)](https://coveralls.io/r/zabawaba99/random?branch=master)
 
 ---
 
