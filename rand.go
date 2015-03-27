@@ -28,6 +28,17 @@ func seed() {
 	gblRand = rand.New(rand.NewSource(randSeed))
 }
 
+var stringRune = []rune(`0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz`)
+
+// String returns an alphanumeric string of length n
+func String(n int) string {
+	parts := make([]rune, n)
+	for i, _ := range parts {
+		parts[i] = stringRune[Intn(n)]
+	}
+	return string(parts)
+}
+
 // ExpFloat64 returns an exponentially distributed float64 in the range
 // (0, +math.MaxFloat64] with an exponential distribution whose rate parameter
 // (lambda) is 1 and whose mean is 1/lambda (1). To produce a distribution with

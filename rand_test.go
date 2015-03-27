@@ -61,3 +61,19 @@ func TestSeedEnv(t *testing.T) {
 
 	os.Setenv("GOSEED", tmp)
 }
+
+func TestString(t *testing.T) {
+	seedVal := int64(42)
+
+	tmp := os.Getenv("GOSEED")
+	os.Setenv("GOSEED", strconv.FormatInt(seedVal, 10))
+	gblRand = nil
+
+	seed()
+	require.NotNil(t, gblRand)
+
+	size := 42
+	assert.Len(t, String(size), size)
+
+	os.Setenv("GOSEED", tmp)
+}
