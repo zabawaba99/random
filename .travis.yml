@@ -5,6 +5,10 @@ go:
   - 1.4
   - tip
 
+matrix:
+  allow_failures:
+    - go: tip
+
 install:
   # linters
   - go get github.com/golang/lint/golint
