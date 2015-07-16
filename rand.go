@@ -17,7 +17,7 @@ func init() {
 }
 
 func seed() {
-	randSeed = time.Now().Unix()
+	randSeed = time.Now().UnixNano()
 	if env := os.Getenv("GOSEED"); env != "" {
 		t, err := strconv.ParseInt(env, 10, 64)
 		if err == nil {
